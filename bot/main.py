@@ -15,7 +15,7 @@ async def ping(ctx):
 @bot.event
 async def on_message(message):
     if message.author.bot:
-    return
+        return
     message_str = message.content.lower()
     message_list = message_str.split()
     if "hello" in message.content.lower():
