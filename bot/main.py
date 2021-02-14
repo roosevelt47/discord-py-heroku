@@ -8,7 +8,7 @@ TOKEN = os.getenv("DISCORD_TOKEN")
 @bot.event
 async def on_ready():
     print(f"Logged in as {bot.user.name}({bot.user.id}) OKAYYYYYYYYYYYYYYYYY")
-    await client.change_presence(activity=discord.Game(name='with myself'))
+    await bot.change_presence(activity=discord.Game(name='with myself'))
 
 @bot.command()
 async def ping(ctx):
