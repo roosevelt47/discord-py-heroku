@@ -51,7 +51,7 @@ async def gapply(messages, email):
     await messages.channel.send(reply)
     
     info = f'New request by {author.mention} Email - {email} userid -'
-    infochan = client.get_channel(810476969611231302)
+    infochan = bot.get_channel(810476969611231302)
     await infochan.send(info)
     await messages.infochan.send(info)
     print(reply)
