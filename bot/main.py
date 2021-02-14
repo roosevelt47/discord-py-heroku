@@ -1,3 +1,4 @@
+
 import os
 from discord.ext import commands
 
@@ -45,9 +46,11 @@ async def gapply(messages, email):
     await messages.message.delete()
     reply = f'Your email has been recorded {author.mention}!'
     await messages.channel.send(reply)
-    info = f'New request by {author.mention} Email - {email} userid -'
     
-    await messages.channel.send(info)
+    info = f'New request by {author.mention} Email - {email} userid -'
+    infochan = client.get_channel(12324234183172)
+    await infochan.send(info)
+    await messages.infochan.send(info)
     print(reply)
 
 if __name__ == "__main__":
