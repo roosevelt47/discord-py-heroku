@@ -37,6 +37,13 @@ async def on_message(message):
     elif "hi" in message_list:
         await message.channel.send("Hello!")
 
+@bot.command()
+async def gapply(messages, email):
+    author = messages.author
+    await messages.message.delete()
+    reply = f'Your email has been recorded {author.mention}!'
+    await messages.channel.send(reply)
+    await messages.channel.send(author.mention, email,'hi')
 
 if __name__ == "__main__":
     bot.run(TOKEN)
