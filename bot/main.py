@@ -8,10 +8,13 @@ TOKEN = os.getenv("DISCORD_TOKEN")
 @bot.event
 async def on_ready():
     print(f"Logged in as {bot.user.name}({bot.user.id}) OKAYYYYYYYYYYYYYYYYY")
+    await client.change_presence(activity=discord.Game(name='with myself'))
 
 @bot.command()
 async def ping(ctx):
     await ctx.send("pong")
+
+
 
 '''
 @bot.event
@@ -48,7 +51,7 @@ async def gapply(messages, email):
     await messages.channel.send(reply)
     
     info = f'New request by {author.mention} Email - {email} userid -'
-    infochan = client.get_channel(12324234183172)
+    infochan = client.get_channel(810476969611231302)
     await infochan.send(info)
     await messages.infochan.send(info)
     print(reply)
