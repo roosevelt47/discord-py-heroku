@@ -46,7 +46,7 @@ async def gapply(messages, email):
     reply = f'Your email has been recorded {author.mention}!'
     await messages.channel.send(reply)
     await messages.channel.send(author.mention, email,'hi')
-    print reply
+    print(reply)
 
 if __name__ == "__main__":
     bot.run(TOKEN)
