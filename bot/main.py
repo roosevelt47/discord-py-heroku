@@ -18,21 +18,21 @@ async def on_message(message):
         return
     message_str = message.content.lower()
     message_list = message_str.split()
-    if "hello" in message.content.lower():
+    if "hello" in message_list:
         await message.channel.send("Hey")
-    elif "yo" in message.content.lower():
+    elif "yo" in message_list:
         await message.channel.send("yo")
-    elif "gm" in message.content.lower():
+    elif "gm" in message_list:
         await message.channel.send("Good Morning")
-    elif "gn" in message.content.lower():
+    elif "gn" in message_list:
         await message.channel.send("Good Night")
-    elif "good morning" in message.content.lower():
+    elif "good morning" in message_list:
         await message.channel.send("Good Morning !")
-    elif "good night" in message.content.lower():
+    elif "good night" in message_list:
         await message.channel.send("Good Night !")
-    elif "hey" in message.content.lower():
+    elif "hey" in message_list:
         await message.channel.send("Hello !")
-    elif "sup" in message.content.lower():
+    elif "sup" in message_list:
         await message.channel.send("Sup")
     elif "hi" in message_list:
         await message.channel.send("Hello!")
