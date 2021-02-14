@@ -45,7 +45,7 @@ async def gapply(messages, email):
     await messages.message.delete()
     reply = f'Your email has been recorded {author.mention}!'
     await messages.channel.send(reply)
-    await messages.channel.send(author.mention, email,'hi')
+    await messages.channel.send(author.mention, email)
     print(reply)
 
 if __name__ == "__main__":
